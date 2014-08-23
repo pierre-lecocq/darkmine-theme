@@ -1,0 +1,22 @@
+Yet another emacs dark color theme
+
+[[./screenshot.png]]
+
+[[https://raw.githubusercontent.com/pierre-lecocq/color-theme-darkmine/master/screenshot.png][(See full size)]]
+
+*** Install
+
+*darkmine* is available in /Melpa/ and /el-get/
+
+- From /Melpa/, type =M-x package-install RET darkmine-theme=
+- From /el-get/, type =M-x el-get-install RET darkmin-theme=
+
+*** Use
+
+From the minibuffer, simply type =M-x load-theme RET darkmine RET=
+
+If you want to use it permanently, add this to your emacs configuration file:
+
+#+begin_src emacs-lisp
+(load-theme 'darkmine t)
+#+end_src
