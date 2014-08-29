@@ -44,6 +44,10 @@
       (darkmine-background-region "#1D68C4")
       (darkmine-foreground-region "#FFFFFF")
       (darkmine-foreground-which-func "#1D68C4")
+      (darkmine-background-company "#383838")
+      (darkmine-background-company-selection "#585858")
+      (darkmine-background-company-scrollbar "#989898")
+      (darkmine-foreground-company-scrollbar "#b8b8b8")
       ;; fonts
       (darkmine-font-comment "#a5a5a5")
       (darkmine-font-constant "#8dd7e9")
@@ -65,6 +69,10 @@
    `(mode-line-inactive ((t (:foreground ,darkmine-foreground-modeline-inactive :background ,darkmine-background-modeline-inactive))))
    `(region ((t (:foreground ,darkmine-foreground-region :background ,darkmine-background-region))))
    `(which-func ((t (:foreground ,darkmine-foreground-which-func))))
+   `(company-tooltip ((t (:inherit default :background ,darkmine-background-company))))
+   `(company-tooltip-selection ((t (:inherit default :background ,darkmine-background-company-selection))))
+   `(company-scrollbar-bg ((t (:inherit default :background ,darkmine-background-company-scrollbar))))
+   `(company-scrollbar-fg ((t (:inherit default :background ,darkmine-foreground-company-scrollbar))))
    ;; fonts
    `(font-lock-comment-face ((t (:foreground ,darkmine-font-comment))))
    `(font-lock-constant-face ((t (:foreground ,darkmine-font-constant))))
