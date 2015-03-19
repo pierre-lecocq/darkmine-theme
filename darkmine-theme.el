@@ -3,7 +3,7 @@
 ;; Copyright (C) 2014 Pierre Lecocq
 ;; Author: Pierre Lecocq <pierre.lecocq@gmail.com>
 ;; URL: https://github.com/pierre-lecocq/darkmine-theme
-;; Version: 0.2
+;; Version: 0.3
 
 ;; Permission is hereby granted, free of charge, to any person obtaining
 ;; a copy of this software and associated documentation files (the
@@ -25,7 +25,9 @@
 ;; SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ;;; Commentary:
+;;
 ;; Yet another emacs dark color theme
+;;
 
 ;;; Code:
 
@@ -43,6 +45,7 @@
       (darkmine-foreground-modeline-inactive "#939393")
       (darkmine-background-region "#1D68C4")
       (darkmine-foreground-region "#FFFFFF")
+      (darkmine-background-paren-match "#282828")
       (darkmine-foreground-which-func "#1D68C4")
       (darkmine-background-company "#383838")
       (darkmine-background-company-selection "#585858")
@@ -57,8 +60,7 @@
       (darkmine-font-keyword "#5FB7CC")
       (darkmine-font-string "#aa3939")
       (darkmine-font-doc-string "#d46a6a")
-      (darkmine-font-type "#7FFFD4")
-      )
+      (darkmine-font-type "#7FFFD4"))
 
   (custom-theme-set-faces
    'darkmine
@@ -67,6 +69,7 @@
    `(vertical-border ((t (:foreground ,darkmine-border))))
    `(mode-line ((t (:foreground ,darkmine-foreground-modeline :background ,darkmine-background-modeline))))
    `(mode-line-inactive ((t (:foreground ,darkmine-foreground-modeline-inactive :background ,darkmine-background-modeline-inactive))))
+   `(show-paren-match-face ((t (:background ,darkmine-background-paren-match))))
    `(region ((t (:foreground ,darkmine-foreground-region :background ,darkmine-background-region))))
    `(which-func ((t (:foreground ,darkmine-foreground-which-func))))
    `(company-tooltip ((t (:inherit default :background ,darkmine-background-company))))
