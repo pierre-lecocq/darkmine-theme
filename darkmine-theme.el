@@ -3,7 +3,7 @@
 ;; Copyright (C) 2014 Pierre Lecocq
 ;; Author: Pierre Lecocq <pierre.lecocq@gmail.com>
 ;; URL: https://github.com/pierre-lecocq/darkmine-theme
-;; Version: 0.3
+;; Version: 0.5
 
 ;; Permission is hereby granted, free of charge, to any person obtaining
 ;; a copy of this software and associated documentation files (the
@@ -33,59 +33,63 @@
 
 (deftheme darkmine "Yet another emacs dark theme")
 
-(let ((darkmine-background "#181818")
-      (darkmine-foreground "#E3E3E3")
-      ;; specials
-      (darkmine-border "#282828")
-      (darkmine-cursor "#08CA5F")
-      (darkmine-mouse "#181818")
-      (darkmine-background-modeline "#282828")
-      (darkmine-foreground-modeline "#FFFFFF")
-      (darkmine-background-modeline-inactive "#1F1F1F")
-      (darkmine-foreground-modeline-inactive "#939393")
-      (darkmine-background-region "#1D68C4")
-      (darkmine-foreground-region "#FFFFFF")
-      (darkmine-background-paren-match "#282828")
-      (darkmine-foreground-which-func "#1D68C4")
-      (darkmine-background-company "#383838")
-      (darkmine-background-company-selection "#585858")
-      (darkmine-background-company-scrollbar "#989898")
-      (darkmine-foreground-company-scrollbar "#b8b8b8")
-      ;; fonts
-      (darkmine-font-comment "#a5a5a5")
-      (darkmine-font-constant "#8dd7e9")
-      (darkmine-font-builtin "#7FFFD4")
-      (darkmine-font-function-name "#1D68C4")
-      (darkmine-font-variable-name "#ffffaa")
-      (darkmine-font-keyword "#5FB7CC")
-      (darkmine-font-string "#aa3939")
-      (darkmine-font-doc-string "#d46a6a")
-      (darkmine-font-type "#7FFFD4"))
+(let ((grey-1       "#181818")
+      (grey-2       "#1F1F1F")
+      (grey-3       "#282828")
+      (grey-4       "#383838")
+      (grey-5       "#585858")
+      (grey-6       "#939393")
+      (grey-7       "#989898")
+      (grey-8       "#a5a5a5")
+      (grey-9       "#b8b8b8")
+      (grey-10      "#E3E3E3")
+      (blue-1       "#1D68C4")
+      (blue-2       "#5FB7CC")
+      (blue-3       "#8dd7e9")
+      (green-1      "#7FFFD4")
+      (yellow-1     "#ffffaa")
+      (red-1        "#aa3939")
+      (red-2        "#d46a6a")
+      (white        "#FFFFFF"))
 
   (custom-theme-set-faces
    'darkmine
-   `(default ((t (:foreground ,darkmine-foreground :background ,darkmine-background))))
-   ;; specials
-   `(vertical-border ((t (:foreground ,darkmine-border))))
-   `(mode-line ((t (:foreground ,darkmine-foreground-modeline :background ,darkmine-background-modeline))))
-   `(mode-line-inactive ((t (:foreground ,darkmine-foreground-modeline-inactive :background ,darkmine-background-modeline-inactive))))
-   `(show-paren-match-face ((t (:background ,darkmine-background-paren-match))))
-   `(region ((t (:foreground ,darkmine-foreground-region :background ,darkmine-background-region))))
-   `(which-func ((t (:foreground ,darkmine-foreground-which-func))))
-   `(company-tooltip ((t (:inherit default :background ,darkmine-background-company))))
-   `(company-tooltip-selection ((t (:inherit default :background ,darkmine-background-company-selection))))
-   `(company-scrollbar-bg ((t (:inherit default :background ,darkmine-background-company-scrollbar))))
-   `(company-scrollbar-fg ((t (:inherit default :background ,darkmine-foreground-company-scrollbar))))
-   ;; fonts
-   `(font-lock-comment-face ((t (:foreground ,darkmine-font-comment))))
-   `(font-lock-constant-face ((t (:foreground ,darkmine-font-constant))))
-   `(font-lock-builtin-face ((t (:foreground ,darkmine-font-builtin))))
-   `(font-lock-function-name-face ((t (:foreground ,darkmine-font-function-name))))
-   `(font-lock-variable-name-face ((t (:foreground ,darkmine-font-variable-name))))
-   `(font-lock-keyword-face ((t (:foreground ,darkmine-font-keyword))))
-   `(font-lock-string-face ((t (:foreground ,darkmine-font-string))))
-   `(font-lock-doc-string-face ((t (:foreground ,darkmine-font-doc-string))))
-   `(font-lock-type-face ((t (:foreground ,darkmine-font-type))))
+
+   ;; internals
+   `(default ((t (:foreground ,grey-10 :background ,grey-1))))
+   `(vertical-border ((t (:foreground ,grey-3))))
+   `(show-paren-match-face ((t (:background ,grey-3))))
+   `(region ((t (:foreground ,white :background ,blue-1))))
+   `(which-func ((t (:foreground ,blue-1))))
+
+   ;; fonts lock faces
+   `(font-lock-comment-face ((t (:foreground ,grey-8))))
+   `(font-lock-constant-face ((t (:foreground ,blue-3))))
+   `(font-lock-builtin-face ((t (:foreground ,green-1))))
+   `(font-lock-function-name-face ((t (:foreground ,blue-1))))
+   `(font-lock-variable-name-face ((t (:foreground ,yellow-1))))
+   `(font-lock-keyword-face ((t (:foreground ,blue-2))))
+   `(font-lock-string-face ((t (:foreground ,red-1))))
+   `(font-lock-doc-string-face ((t (:foreground ,red-2))))
+   `(font-lock-type-face ((t (:foreground ,green-1))))
+
+   ;; mode-line
+   `(mode-line ((t (:foreground ,white :background ,grey-3))))
+   `(mode-line-inactive ((t (:foreground ,grey-6 :background ,grey-2))))
+
+   ;; company
+   `(company-tooltip ((t (:inherit default :background ,grey-4))))
+   `(company-tooltip-selection ((t (:inherit default :background ,grey-5))))
+   `(company-scrollbar-bg ((t (:inherit default :background ,grey-7))))
+   `(company-scrollbar-fg ((t (:inherit default :background ,grey-9))))
+
+   ;; helm
+   `(helm-ff-file ((t (:foreground ,white))))
+   `(helm-ff-directory ((t (:foreground ,blue-1))))
+   `(helm-ff-symlink ((t (:foreground ,green-1))))
+   `(helm-candidate-number ((t (:foreground ,grey-10 :background ,blue-1))))
+   `(helm-selection ((t (:background ,grey-4 :bold t))))
+   `(helm-selection-line ((t (:background ,grey-4 :bold t))))
   )
 )
 
@@ -95,4 +99,5 @@
                (file-name-as-directory (file-name-directory load-file-name))))
 
 (provide-theme 'darkmine)
+
 ;;; darkmine-theme.el ends here
