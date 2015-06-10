@@ -73,6 +73,10 @@
    `(font-lock-doc-string-face ((t (:foreground ,red-2))))
    `(font-lock-type-face ((t (:foreground ,green-1))))
 
+   ;; hl-line
+   `(hl-line-face ((t (:background ,grey-3 :weight bold))))
+   `(hl-line ((t (:background ,grey-3 :weight bold))))
+
    ;; mode-line
    `(mode-line ((t (:foreground ,white :background ,grey-3))))
    `(mode-line-inactive ((t (:foreground ,grey-6 :background ,grey-2))))
