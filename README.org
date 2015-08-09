@@ -9,7 +9,7 @@ Yet another emacs dark color theme
 *darkmine* is available in /Melpa/ and /el-get/
 
 - From /Melpa/, type =M-x package-install RET darkmine-theme=
-- From /el-get/, type =M-x el-get-install RET darkmin-theme=
+- From /el-get/, type =M-x el-get-install RET darkmine-theme=
 
 *** Use
 
