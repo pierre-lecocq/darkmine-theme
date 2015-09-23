@@ -87,7 +87,7 @@
    `(company-scrollbar-bg ((t (:inherit default :background ,grey-7))))
    `(company-scrollbar-fg ((t (:inherit default :background ,grey-9))))
 
-   ;; rainbow delimiters
+   ;; rainbow delimiters - from material
    `(rainbow-delimiters-depth-1-face ((t (:foreground ,"#e91e63"))))
    `(rainbow-delimiters-depth-2-face ((t (:foreground ,"#1565C0"))))
    `(rainbow-delimiters-depth-3-face ((t (:foreground ,"#EF6C00"))))
