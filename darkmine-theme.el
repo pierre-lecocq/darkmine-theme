@@ -87,6 +87,18 @@
    `(company-scrollbar-bg ((t (:inherit default :background ,grey-7))))
    `(company-scrollbar-fg ((t (:inherit default :background ,grey-9))))
 
+   ;; rainbow delimiters
+   `(rainbow-delimiters-depth-1-face ((t (:foreground ,"#e91e63"))))
+   `(rainbow-delimiters-depth-2-face ((t (:foreground ,"#1565C0"))))
+   `(rainbow-delimiters-depth-3-face ((t (:foreground ,"#EF6C00"))))
+   `(rainbow-delimiters-depth-4-face ((t (:foreground ,"#B388FF"))))
+   `(rainbow-delimiters-depth-5-face ((t (:foreground ,"#76ff03"))))
+   `(rainbow-delimiters-depth-6-face ((t (:foreground ,"#26A69A"))))
+   `(rainbow-delimiters-depth-7-face ((t (:foreground ,"#B71C1C"))))
+   `(rainbow-delimiters-depth-8-face ((t (:foreground ,"#795548"))))
+   `(rainbow-delimiters-depth-9-face ((t (:foreground ,"#827717"))))
+   `(rainbow-delimiters-unmatched-face ((t (:foreground ,grey-10 :background ,"#EF6C00"))))
+
    ;; helm
    `(helm-ff-file ((t (:foreground ,white))))
    `(helm-ff-directory ((t (:foreground ,blue-1))))
