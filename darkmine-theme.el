@@ -106,6 +106,9 @@
    `(helm-candidate-number ((t (:foreground ,grey-10 :background ,blue-1))))
    `(helm-selection ((t (:background ,grey-4 :bold t))))
    `(helm-selection-line ((t (:background ,grey-4 :bold t))))
+
+   ;; eshell
+   `(eshell-prompt ((t (:foreground ,green-1 :bold t))))
   )
 )
 
