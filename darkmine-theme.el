@@ -109,6 +109,9 @@
 
    ;; eshell
    `(eshell-prompt ((t (:foreground ,green-1 :bold t))))
+
+   ;; org-mode
+   `(org-block-background ((t (:background ,grey-3))))
   )
 )
 
