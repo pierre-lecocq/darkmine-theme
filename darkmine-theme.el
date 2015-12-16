@@ -112,8 +112,11 @@
 
    ;; org-mode
    `(org-block-background ((t (:background ,grey-3))))
-  )
-)
+
+   ;; gnus
+   `(gnus-group-mail-3 ((t (:foreground ,red-2))))
+   `(gnus-group-mail-3-empty ((t (:foreground ,grey-9))))
+  ))
 
 ;;;###autoload
 (when load-file-name
