@@ -116,6 +116,10 @@
    ;; gnus
    `(gnus-group-mail-3 ((t (:foreground ,red-2))))
    `(gnus-group-mail-3-empty ((t (:foreground ,grey-9))))
+
+   ;; ido
+   `(ido-subdir ((t (:foreground ,blue-1))))
+   `(ido-only-match ((t (:foreground ,white))))
   ))
 
 ;;;###autoload
